@@ -1,44 +1,28 @@
 {
-  "name": "create-react-app",
+  "name": "tauri-react-example",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "yarn start",
+    "react-start": "parcel -p 3000 src/index.html --out-dir build",
+    "react-build": "parcel build src/index.html --out-dir build --public-url ./",
+    "build": "yarn react-build && yarn tauri:build",
+    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && yarn tauri:dev \"",
+    "tauri:prod": "tauri",
+    "tauri:init": "tauri init",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "5.10.1",
-    "@testing-library/react": "10.2.1",
-    "@testing-library/user-event": "11.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1"
-  },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "tauri:prod": "tauri",
-    "tauri:source": "node ../../../../cli/tauri.js/bin/tauri",
-    "tauri:source:init": "yarn tauri:source init --tauriPath ../../../../tauri",
-    "tauri:prod:init": "yarn tauri:prod init",
-    "tauri:source:dev": "yarn tauri:source dev",
-    "tauri:prod:dev": "yarn tauri:prod dev",
-    "tauri:source:build": "yarn tauri:source build",
-    "tauri:prod:build": "yarn tauri:prod build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "tauri": "^0.5.2",
+    "web-vitals": "^0.2.2"
   },
   "devDependencies": {
-    "@craco/craco": "5.6.4"
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "parcel-bundler": "^1.12.4",
+    "wait-on": "^5.0.1"
   }
 }
