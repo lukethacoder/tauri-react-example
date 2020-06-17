@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "yarn start",
-    "react-start": "parcel -p 3000 src/index.html --out-dir build",
-    "react-build": "parcel build src/index.html --out-dir build --public-url ./",
-    "build": "yarn react-build && yarn tauri:build",
-    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && yarn tauri:dev \"",
+    "react:dev": "parcel -p 3000 src/index.html --out-dir build",
+    "react:build": "parcel build src/index.html --out-dir build --public-url ./",
+    "build": "yarn react:build && yarn tauri:build",
+    "start": "concurrently \"cross-env BROWSER=none yarn react:dev\" \"wait-on http://localhost:3000 && yarn tauri:dev \"",
     "tauri:prod": "tauri",
     "tauri:init": "tauri init",
     "tauri:dev": "tauri dev",
@@ -16,13 +16,13 @@
   "dependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tauri": "^0.5.2",
     "web-vitals": "^0.2.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
     "parcel-bundler": "^1.12.4",
+    "tauri": "^0.6.3",
     "wait-on": "^5.0.1"
   }
 }

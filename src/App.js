@@ -1,23 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Tauri from 'tauri/api';
+
 import './App.css';
 
 function App() {
+  const [msgFromRust, setMsgFromRust] = useState('');
+
+  function callRustCmd() {
+    Tauri.promisified({
+      cmd: 'performRequest',
+      endpoint: 'test_endpoint_value',
+      body: ['javascript', 'values', 'go', 'here'],
+    })
+      .then(Tauri.registerResponse)
+      .then((res) => {
+        console.log('res => ', res);
+        setMsgFromRust(res.message);
+      })
+      .catch(Tauri.registerResponse);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {!!msgFromRust && <p>response message: {msgFromRust}</p>}
+
+        <button onClick={callRustCmd}>call rust</button>
       </header>
     </div>
   );

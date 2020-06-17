@@ -8,7 +8,7 @@
   "ctx": {},
   "tauri": {
     "embeddedServer": {
-      "active": true
+      "active": false
     },
     "bundle": {
       "active": true,
@@ -40,7 +40,7 @@
       "all": true
     },
     "window": {
-      "title": "Tauri App",
+      "title": "Tauri Create React App",
       "width": 800,
       "height": 600,
       "resizable": true,
