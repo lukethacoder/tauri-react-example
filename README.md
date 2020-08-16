@@ -1,5 +1,7 @@
 ## Tauri React Example
 
+# Looks like cargo or something BROKE -\_-
+
 Simple [CRA](https://create-react-app.dev/) starter running with [Tauri](https://tauri.studio/). [Parcel](https://parceljs.org/) is running as our bundler of choice.
 
 Should hopefully save some time trying to setup Tauri and React.

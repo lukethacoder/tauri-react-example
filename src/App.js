@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Tauri from 'tauri/api';
+// import Tauri from 'tauri/api';
 
 import './App.css';
 
@@ -7,17 +7,17 @@ function App() {
   const [msgFromRust, setMsgFromRust] = useState('');
 
   function callRustCmd() {
-    Tauri.promisified({
-      cmd: 'performRequest',
-      endpoint: 'test_endpoint_value',
-      body: ['javascript', 'values', 'go', 'here'],
-    })
-      .then(Tauri.registerResponse)
-      .then((res) => {
-        console.log('res => ', res);
-        setMsgFromRust(res.message);
-      })
-      .catch(Tauri.registerResponse);
+    // Tauri.promisified({
+    //   cmd: 'performRequest',
+    //   endpoint: 'test_endpoint_value',
+    //   body: ['javascript', 'values', 'go', 'here'],
+    // })
+    //   .then(Tauri.registerResponse)
+    //   .then((res) => {
+    //     console.log('res => ', res);
+    //     setMsgFromRust(res.message);
+    //   })
+    //   .catch(Tauri.registerResponse);
   }
 
   return (
