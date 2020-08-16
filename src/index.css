@@ -69,3 +69,13 @@ button:focus,
 button:active {
   outline: none;
 }
+
+.component-wrapper {
+  position: relative;
+  width: 100%;
+}
+.component-wrapper p {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}

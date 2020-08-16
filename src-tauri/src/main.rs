@@ -38,7 +38,7 @@ fn main() {
                   // if the returned value is Ok, the promise will be resolved with its value
                   // if the returned value is Err, the promise will be rejected with its value
                   // the value is a string that will be eval'd
-                  Ok("{ message: 'Hello World from Rust!' }".to_string())
+                  Ok("{ \"message\": \"Hello World from Rust!\" }".to_string())
                 },
                 callback,
                 error,

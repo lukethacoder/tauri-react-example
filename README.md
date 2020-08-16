@@ -1,8 +1,8 @@
 ## Tauri React Example
 
-# Looks like cargo or something BROKE -\_-
+![test-screenshot.jpg](./docs/test-screenshot.jpg)
 
-Simple [CRA](https://create-react-app.dev/) starter running with [Tauri](https://tauri.studio/). [Parcel](https://parceljs.org/) is running as our bundler of choice.
+Simple [CRA](https://create-react-app.dev/) starter running with [Tauri](https://tauri.studio/).
 
 Should hopefully save some time trying to setup Tauri and React.
 
@@ -17,7 +17,7 @@ yarn dev
 ### Production
 
 ```
-yarn build
+yarn tauri:build
 ```
 
 ## Debugging on Windows
