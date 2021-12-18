@@ -1,8 +1,10 @@
-## Tauri React Example
+## Tauri React Example (2022)
 
-![test-screenshot.jpg](./docs/test-screenshot.jpg)
+> recently updated with the latest versions of tauri
 
-Simple [CRA](https://create-react-app.dev/) starter running with [Tauri](https://tauri.studio/).
+![test-screenshot.jpg](./docs/test-screenshot.png)
+
+Simple [React](https://create-react-app.dev/)([snowpack](https://www.snowpack.dev/)) starter running with [Tauri](https://tauri.studio/).
 
 Should hopefully save some time trying to setup Tauri and React.
 
@@ -11,14 +13,9 @@ Should hopefully save some time trying to setup Tauri and React.
 ### Development
 
 ```
-yarn dev
+yarn tauri dev
 ```
 
-### Production
-
-```
-yarn tauri:build
-```
 
 ## Debugging on Windows
 

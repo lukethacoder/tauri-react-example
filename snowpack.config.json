@@ -1,0 +1,21 @@
+{
+  "mount": {
+    "dist": "/",
+    "src": "/"
+  },
+  "devOptions": {
+    "open": "none"
+  },
+  "exclude": [
+    "**/node_modules/**/*",
+    "**/*.stories.*"
+  ],
+  "alias": {
+    "@app": "./src"
+  },
+  "plugins": [
+    "@snowpack/plugin-postcss",
+    "@snowpack/plugin-react-refresh",
+    "@snowpack/plugin-typescript"
+  ]
+}

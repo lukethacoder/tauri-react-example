@@ -1,36 +1,31 @@
 {
   "name": "tauri-react-example",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "dev": "yarn tauri:dev",
-    "build": "craco build",
-    "start": "craco start",
-    "tauri:prod": "yarn tauri",
-    "tauri:init": "yarn tauri init",
-    "tauri:dev": "yarn tauri dev",
-    "tauri:build": "yarn tauri build"
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "tauri": "tauri"
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-scripts": "^3.4.3",
-    "web-vitals": "^0.2.4"
+    "@tauri-apps/api": "^1.0.0-beta.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@craco/craco": "^5.6.4",
-    "tauri": "^0.11.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@snowpack/plugin-postcss": "^1.4.3",
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@snowpack/plugin-typescript": "^1.2.1",
+    "@tauri-apps/cli": "^1.0.0-beta.10",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
+    "prettier": "^2.4.1",
+    "snowpack": "^3.8.8",
+    "typescript": "^4.5.4"
   }
 }

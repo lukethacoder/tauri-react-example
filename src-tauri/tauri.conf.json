@@ -1,47 +1,41 @@
 {
+  "package": {
+    "productName": "Salesforce Mate",
+    "version": "0.1.0"
+  },
   "build": {
-    "distDir": "../build",
-    "devPath": "http://localhost:3000",
+    "distDir": "../public",
+    "devPath": "http://localhost:8080/",
     "beforeDevCommand": "yarn start",
     "beforeBuildCommand": "yarn build"
   },
-  "ctx": {},
   "tauri": {
-    "embeddedServer": {
-      "active": true
-    },
     "bundle": {
       "active": true,
       "identifier": "com.tauri.dev",
       "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "targets": [
-        "deb",
-        "osx",
-        "msi",
-        "appimage"
+        "../.icons/32x32.png",
+        "../.icons/128x128.png",
+        "../.icons/128x128@2x.png",
+        "../.icons/icon.icns",
+        "../.icons/icon.ico"
       ]
     },
     "allowlist": {
-      "all": false
+      "all": true
     },
-    "window": {
-      "title": "tauri react example",
-      "width": 800,
-      "height": 600,
-      "resizable": true,
-      "fullscreen": false
-    },
+    "windows": [
+      {
+        "title": "tauri react example",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "transparent": true,
+        "fullscreen": false
+      }
+    ],
     "security": {
-      "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline'"
-    },
-    "inliner": {
-      "active": true
+      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: asset: customprotocol: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     }
   }
 }

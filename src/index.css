@@ -8,11 +8,6 @@ body {
   background-color: #17382d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 button {
   display: inline-block;
   position: relative;
@@ -55,24 +50,30 @@ button:after {
   right: 0.15em;
   bottom: -0.99em;
   background: #eff9f7;
-  border: 3px solid  #eff9f7;
+  border: 3px solid #eff9f7;
   transform: skewX(-45deg);
 }
-/* button:hover {
-  color: #17382d;
-  background-color: #eff9f7;
-  border-radius: 0px;
-  box-shadow: -0.5em .5em  #eff9f7;
-  transform-origin: left bottom;
-} */
 button:focus,
 button:active {
-  outline: none;
+  /* outline: none; */
+}
+
+input {
+  background-color: transparent;
+  color: #eff9f7;
+  border: 3px solid #eff9f7;
+  margin: 0 0 16px;
+  padding: 6px 12px;
+  font-size: 0.84rem;
+  text-align: center;
 }
 
 .component-wrapper {
   position: relative;
-  width: 100%;
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .component-wrapper p {
   position: absolute;
