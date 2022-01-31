@@ -19,7 +19,7 @@
     "@snowpack/plugin-react-refresh": "2.5.0",
     "@snowpack/plugin-typescript": "1.2.1",
     "@tauri-apps/cli": "1.0.0-beta.10",
-    "@types/react": "17.0.37",
+    "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "autoprefixer": "10.4.0",
     "postcss": "8.4.5",
