@@ -14,6 +14,8 @@
 
 # production
 /build
+/public
+/dist
 /.cache
 
 # misc

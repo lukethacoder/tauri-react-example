@@ -4,7 +4,7 @@
 
 ![test-screenshot.jpg](./docs/test-screenshot.png)
 
-Simple [React](https://create-react-app.dev/)([snowpack](https://www.snowpack.dev/)) starter running with [Tauri](https://tauri.studio/).
+Simple [React](https://create-react-app.dev/)([vite](https://vitejs.dev/)) starter running with [Tauri](https://tauri.studio/).
 
 Should hopefully save some time trying to setup Tauri and React.
 
@@ -14,6 +14,12 @@ Should hopefully save some time trying to setup Tauri and React.
 
 ```
 yarn tauri dev
+```
+
+### Production Build
+
+```
+yarn tauri build
 ```
 
 

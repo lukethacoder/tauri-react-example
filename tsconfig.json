@@ -14,6 +14,7 @@
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "importsNotUsedAsValues": "error",
+    "skipLibCheck": true,
     "paths": {
       "*": [".snowpack/types/*"],
       "@app": ["src"]

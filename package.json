@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
+    "start": "vite",
+    "build": "tsc && vite build",
     "tauri": "tauri"
   },
   "dependencies": {
@@ -21,11 +21,13 @@
     "@tauri-apps/cli": "1.0.0-rc.5",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
+    "@vitejs/plugin-react": "^1.2.0",
     "autoprefixer": "10.4.2",
     "postcss": "8.4.7",
     "postcss-cli": "9.1.0",
     "prettier": "2.5.1",
     "snowpack": "3.8.8",
-    "typescript": "4.5.5"
+    "typescript": "4.5.5",
+    "vite": "^2.8.4"
   }
 }
