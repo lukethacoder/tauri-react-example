@@ -15,9 +15,6 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@snowpack/plugin-postcss": "1.4.3",
-    "@snowpack/plugin-react-refresh": "2.5.0",
-    "@snowpack/plugin-typescript": "1.2.1",
     "@tauri-apps/cli": "1.0.0-rc.5",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
