@@ -8,7 +8,7 @@ Simple [React](https://create-react-app.dev/)([vite](https://vitejs.dev/)) start
 
 Should hopefully save some time trying to setup Tauri and React.
 
-> Currently config'd to run on the [Cloudbridge](https://tauri.studio/docs/usage/patterns/cloudbridge) pattern.
+> Currently config'd to run on the [Cloudbridge](https://tauri.studio/docs/architecture/recipes/cloudbridge) pattern.
 
 ### Development
 
