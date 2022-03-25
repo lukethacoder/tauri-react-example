@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.0.0-rc.7",
-    "@types/react": "17.0.42",
+    "@types/react": "17.0.43",
     "@types/react-dom": "17.0.14",
     "@vitejs/plugin-react": "1.2.0",
     "autoprefixer": "10.4.4",
