@@ -11,7 +11,7 @@ mod cmd;
 
 use serde::{Deserialize, Serialize};
 use tauri::{
-  api::dialog::ask, http::ResponseBuilder, RunEvent, GlobalShortcutManager, Manager,
+  api::dialog::ask, http::ResponseBuilder, RunEvent, WindowEvent, GlobalShortcutManager, Manager,
   CustomMenuItem, Menu, MenuItem, Submenu
 };
 
@@ -102,7 +102,11 @@ fn main() {
     }
 
     // Triggered when a window is trying to close
-    RunEvent::CloseRequested { label, api, .. } => {
+    RunEvent::WindowEvent {
+      label,
+      event: WindowEvent::CloseRequested { api, ..},
+      ..
+    } => {
       let app_handle = app_handle.clone();
       let window = app_handle.get_window(&label).unwrap();
       // use the exposed close api, and prevent the event loop to close
