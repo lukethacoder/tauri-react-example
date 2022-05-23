@@ -112,3 +112,12 @@ input {
 .dnd-container {
   width: 100%;
 }
+.draggable-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.draggable-item svg {
+  height: 16px;
+  color: #ffffff;
+}
