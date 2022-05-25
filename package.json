@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@tauri-apps/api": "1.0.0-rc.6",
+    "@types/react-beautiful-dnd": "^13.1.2",
     "react": "18.1.0",
-    "react-beautiful-dnd": "13.1.0",
+    "react-beautiful-dnd": "^13.1.0",
     "react-dom": "18.1.0"
   },
   "devDependencies": {
