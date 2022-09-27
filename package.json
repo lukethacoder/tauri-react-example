@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/react-beautiful-dnd": "13.1.2",
     "@tauri-apps/cli": "1.1.1",
-    "@types/react": "18.0.17",
+    "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@vitejs/plugin-react": "2.1.0",
     "autoprefixer": "10.4.8",
