@@ -1,4 +1,4 @@
-## Tauri React Example (2022)
+## Tauri React Example (2023)
 
 > recently updated with the latest versions of tauri (feat. drag n drop functionality)
 

@@ -1,18 +1,18 @@
 {
   "package": {
-    "productName": "Salesforce Mate",
+    "productName": "tauri-react-example",
     "version": "0.1.0"
   },
   "build": {
     "distDir": "../dist",
-    "devPath": "http://localhost:3000/",
+    "devPath": "http://localhost:5173/",
     "beforeDevCommand": "yarn start",
     "beforeBuildCommand": "yarn build"
   },
   "tauri": {
     "bundle": {
       "active": true,
-      "identifier": "com.tauri.dev",
+      "identifier": "com.tauri.react.example.dev",
       "icon": [
         "../.icons/32x32.png",
         "../.icons/128x128.png",
