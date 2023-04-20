@@ -20,7 +20,7 @@
     "@types/react": "18.0.28",
     "@types/react-beautiful-dnd": "13.1.3",
     "@types/react-dom": "18.0.11",
-    "@vitejs/plugin-react": "3.1.0",
+    "@vitejs/plugin-react": "4.0.0",
     "autoprefixer": "10.4.13",
     "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
