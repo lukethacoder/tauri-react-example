@@ -26,7 +26,7 @@
     "postcss-cli": "10.1.0",
     "prettier": "3.1.1",
     "snowpack": "3.8.8",
-    "typescript": "5.2.2",
+    "typescript": "5.4.5",
     "vite": "5.0.6"
   }
 }
