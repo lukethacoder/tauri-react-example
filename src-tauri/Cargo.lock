@@ -275,9 +275,9 @@ dependencies = [
 
 [[package]]
 name = "brotli"
-version = "3.3.4"
+version = "6.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1a0b1dbcc8ae29329621f8d4f0d835787c1c38bb1401979b49d13b0b305ff68"
+checksum = "74f7971dbd9326d58187408ab83117d8ac1bb9c17b085fdacd1cf2f598719b6b"
 dependencies = [
  "alloc-no-stdlib",
  "alloc-stdlib",
@@ -286,9 +286,9 @@ dependencies = [
 
 [[package]]
 name = "brotli-decompressor"
-version = "2.3.4"
+version = "4.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b6561fd3f895a11e8f72af2cb7d22e08366bebc2b6b57f7744c4bda27034744"
+checksum = "9a45bd2e4095a8b518033b128020dd4a55aab1c0a381ba4404a472630f4bc362"
 dependencies = [
  "alloc-no-stdlib",
  "alloc-stdlib",
@@ -965,6 +965,15 @@ checksum = "a8a2db397cb1c8772f31494cb8917e48cd1e64f0fa7efac59fbd741a0a8ce841"
 dependencies = [
  "crc32fast",
  "miniz_oxide",
+]
+
+[[package]]
+name = "fluent-uri"
+version = "0.1.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "17c704e9dbe1ddd863da1e6ff3567795087b1eb201ce80d8fa81162e1516500d"
+dependencies = [
+ "bitflags",
 ]
 
 [[package]]
@@ -1782,13 +1791,25 @@ dependencies = [
 
 [[package]]
 name = "json-patch"
-version = "1.4.0"
+version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec9ad60d674508f3ca8f380a928cfe7b096bc729c4e2dbfe3852bc45da3ab30b"
+checksum = "5b1fb8864823fad91877e6caea0baca82e49e8db50f8e5c9f9a453e27d3330fc"
 dependencies = [
+ "jsonptr",
  "serde",
  "serde_json",
  "thiserror",
+]
+
+[[package]]
+name = "jsonptr"
+version = "0.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1c6e529149475ca0b2820835d3dce8fcc41c6b943ca608d32f35b449255e4627"
+dependencies = [
+ "fluent-uri",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -3105,9 +3126,9 @@ dependencies = [
 
 [[package]]
 name = "serialize-to-javascript"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9823f2d3b6a81d98228151fdeaf848206a7855a7a042bbf9bf870449a66cafb"
+checksum = "04f3666a07a197cdb77cdf306c32be9b7f598d7060d50cfd4d5aa04bfd92f6c5"
 dependencies = [
  "serde",
  "serde_json",
@@ -3116,13 +3137,13 @@ dependencies = [
 
 [[package]]
 name = "serialize-to-javascript-impl"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "74064874e9f6a15f04c1f3cb627902d0e6b410abbf36668afa873c61889f1763"
+checksum = "772ee033c0916d670af7860b6e1ef7d658a4629a6d0b4c8c3e67f09b3765b75d"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 1.0.109",
+ "syn 2.0.15",
 ]
 
 [[package]]
@@ -3358,15 +3379,11 @@ dependencies = [
 
 [[package]]
 name = "sys-locale"
-version = "0.2.4"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8a11bd9c338fdba09f7881ab41551932ad42e405f61d01e8406baea71c07aee"
+checksum = "e801cf239ecd6ccd71f03d270d67dd53d13e90aab208bf4b8fe4ad957ea949b0"
 dependencies = [
- "js-sys",
  "libc",
- "wasm-bindgen",
- "web-sys",
- "windows-sys 0.45.0",
 ]
 
 [[package]]
@@ -3487,9 +3504,9 @@ dependencies = [
 
 [[package]]
 name = "tauri"
-version = "1.6.7"
+version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67c7177b6be45bbb875aa239578f5adc982a1b3d5ea5b315ccd100aeb0043374"
+checksum = "1bf327e247698d3f39af8aa99401c9708384290d1f5c544bf5d251d44c2fea22"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3508,6 +3525,7 @@ dependencies = [
  "http",
  "ignore",
  "indexmap 1.9.2",
+ "log",
  "nix 0.26.4",
  "notify-rust",
  "objc",
@@ -3516,6 +3534,7 @@ dependencies = [
  "os_info",
  "os_pipe",
  "percent-encoding",
+ "plist",
  "rand 0.8.5",
  "raw-window-handle",
  "regex",
@@ -3546,9 +3565,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-build"
-version = "1.5.2"
+version = "1.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab30cba12974d0f9b09794f61e72cad6da2142d3ceb81e519321bab86ce53312"
+checksum = "586f3e677f940c8bb4f70c52eda05dc59b79e61543f1182de83516810bb8e35d"
 dependencies = [
  "anyhow",
  "cargo_toml",
@@ -3565,9 +3584,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-codegen"
-version = "1.4.3"
+version = "1.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3a1d90db526a8cdfd54444ad3f34d8d4d58fa5c536463915942393743bd06f8"
+checksum = "93a9e3f5cebf779a63bf24903e714ec91196c307d8249a0008b882424328bcda"
 dependencies = [
  "base64 0.21.0",
  "brotli",
@@ -3591,9 +3610,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-macros"
-version = "1.4.4"
+version = "1.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6a582d75414250122e4a597b9dd7d3c910a2c77906648fc2ac9353845ff0feec"
+checksum = "d1d0e989f54fe06c5ef0875c5e19cf96453d099a0a774d5192ab47e80471cdab"
 dependencies = [
  "heck 0.5.0",
  "proc-macro2",
@@ -3615,9 +3634,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-runtime"
-version = "0.14.3"
+version = "0.14.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd7ffddf36d450791018e63a3ddf54979b9581d9644c584a5fb5611e6b5f20b4"
+checksum = "f33fda7d213e239077fad52e96c6b734cecedb30c2382118b64f94cb5103ff3a"
 dependencies = [
  "gtk",
  "http",
@@ -3636,9 +3655,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-runtime-wry"
-version = "0.14.8"
+version = "0.14.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1989b3b4d611f5428b3414a4abae6fa6df30c7eb8ed33250ca90a5f7e5bb3655"
+checksum = "18c447dcd9b0f09c7dc4b752cc33e72788805bfd761fbda5692d30c48289efec"
 dependencies = [
  "arboard",
  "cocoa",
@@ -3657,9 +3676,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-utils"
-version = "1.5.4"
+version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "450b17a7102e5d46d4bdabae0d1590fd27953e704e691fc081f06c06d2253b35"
+checksum = "83a0c939e88d82903a0a7dfb28388b12a3c03504d6bd6086550edaa3b6d8beaa"
 dependencies = [
  "brotli",
  "ctor",
